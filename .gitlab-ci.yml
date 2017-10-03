@@ -7,15 +7,13 @@ BuildLibrary:
   script:
     - ./gradlew build
   tags:
-    - linux
-    - java
+    - gradle
 
 DeployToMaven:
   stage: deploy
   script:
     - ./gradlew publish
   tags:
-    - linux
-    - java
+    - gradle
   only:
     - tags
