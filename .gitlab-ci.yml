@@ -5,14 +5,14 @@ stages:
 BuildLibrary:
   stage: build
   script:
-    - gradle build
+    - ./gradlew build
   tags:
     - gradle
 
 DeployToMaven:
   stage: deploy
   script:
-    - gradle publish
+    - ./gradlew publish
   tags:
     - gradle
   only:
